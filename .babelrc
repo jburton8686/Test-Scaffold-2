@@ -1,0 +1,4 @@
+{
+  "presets": [["latest", { "es2015": { "modules": false } }], "react"],
+  "plugins": ["syntax-dynamic-import", "transform-runtime", "transform-async-to-generator", "react-hot-loader/babel"]
+}

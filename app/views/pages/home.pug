@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+  main.page-home: .width-limiter
+    h1 Built to your liking with the Impero generator
+    br
+    form(class='js-example-trigger')
+      div
+        label(for='example') What do you think of this generator?
+        input(type='text', name='example')
+      div
+        button(type='submit') How awesome are you?
+        span(class='js-example') 0

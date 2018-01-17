@@ -1,0 +1,23 @@
+if !title
+  - title = 'Fallback title'
+if !desc
+  - desc = 'Fallback description'
+
+meta(charset='utf-8')
+meta(http-equiv='x-ua-compatible', content='ie=edge')
+meta(name='viewport' content='width=device-width, initial-scale=1')
+
+meta(name='description', content=desc)
+
+link(href='/static/humans.txt', rel='author', type='text/plain')
+link(href='/static/img/favicon.ico', rel='shortcut icon')
+
+title= title
+
+//- Load web fonts here
+if process.env.DEV_NETWORK !== 'offline'
+  //-
+
+//- Load bundled CSS if not in dev
+if process.env.APP_ENV !== 'development'
+  link(href='/static/dist/style.css', rel='stylesheet', type='text/css')

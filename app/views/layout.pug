@@ -1,0 +1,23 @@
+doctype html
+html(lang='en')
+  head
+    include components/head
+  body
+    block nav
+      include components/nav
+
+    block content
+
+    block footer
+      include components/footer
+
+    //- Load HMR JS & CSS if in dev, else just load bundled JS
+    if process.env.APP_ENV === 'development'
+      script(src='/dev-assets/bundle.js')
+    else
+      script(src='/static/dist/bundle.js')
+
+    block externalScripts
+      //- Load analytics here
+      if process.env.DEV_NETWORK !== 'offline'
+        //-
